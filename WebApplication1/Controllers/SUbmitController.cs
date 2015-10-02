@@ -13,17 +13,14 @@ namespace WebApplication1.Controllers
     public class SubmitController : ApiController
     {
         // POST api/values
-        public JsonResult Post()
+        public JsonResult Post([FromBody] Email input)
         {
-
-
-
             Email email = new Email
             {
-                to = "richarda@nvisionit.co.za",
-                Subject = "Are you Alive",
-                Message = "PLease respond at your earliest convenience",
-                DeliveryType = "Email"
+                to = input.to,
+                Subject = input.Subject,
+                Message = input.Message,
+                DeliveryType = input.DeliveryType
             };
             var result = new JsonResult 
             {
