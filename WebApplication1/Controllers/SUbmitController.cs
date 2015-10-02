@@ -18,7 +18,7 @@ namespace WebApplication1.Controllers
             Email email = new Email
             {
                 to = input.to,
-                Subject = input.Subject,
+                Subject = input.Subject, 
                 Message = input.Message,
                 DeliveryType = input.DeliveryType 
             };
